@@ -1,17 +1,12 @@
-import { useEffect } from 'react';
-import {Link, useParams} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function MovieCard({movie}) {
-  const {id, title} = movie
-  console.log(title)
-  
+function MovieCard({ movie }) {
   return (
-    <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
-        <Link to={`/movie/${id}`}>movie</Link>
-    </article>
+    <div>
+      <h2>{movie.title}</h2>
+      <Link to={`/movie/${movie.id}`}>View Details</Link>
+    </div>
   );
-};
+}
 
 export default MovieCard;
